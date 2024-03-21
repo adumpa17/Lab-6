@@ -11,11 +11,21 @@ if __name__ == "__main__":
                 tempNum = int(tempPassword[i])
                 tempNum += 3
                 encryptedPassword += str(tempNum)
+                new_encryptedPassword = encryptedPassword
 
             print("Your password has been encoded and stored!")
 
+
         if choice == 2:
-            continue
+            new_password = ""
+            for char in new_encryptedPassword:
+                num = int(char)
+                new_num = num - 3
+                if new_num < 0:
+                    new_num = new_num + 10
+                new_password += str(new_num)
+            print(f"The encoded password is {new_encryptedPassword}, and the original password is {new_password}.")
+
 
         if choice == 3:
             break
