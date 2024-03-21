@@ -10,6 +10,8 @@ if __name__ == "__main__":
             for i in range(0, len(tempPassword)):
                 tempNum = int(tempPassword[i])
                 tempNum += 3
+                if tempNum > 9:
+                    tempNum -= 10
                 encryptedPassword += str(tempNum)
                 new_encryptedPassword = encryptedPassword
 
